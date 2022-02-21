@@ -1,0 +1,202 @@
+.navbar {
+  padding: {
+    top: $navbar-padding-y;
+    bottom: $navbar-padding-y;
+  }
+  background-color: $navbar-bg;
+  position: relative;
+
+  &,
+  & > .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link {
+    display: inline-block;
+    font-size: $navbar-nav-link-font-size;
+    font-weight: $navbar-nav-link-font-weight;
+    color: $navbar-nav-link-color;
+    text-decoration: none;
+    padding: $navbar-nav-link-padding-y + .25rem 0;
+    transition: color .2s ease-in-out;
+    position: relative;
+
+    &.nav-link-avatar {
+      padding: 0 !important;
+      
+      @media (min-width: 996px) {
+        margin: 0 !important;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: .25rem;
+      bottom: -($navbar-padding-y + .25rem);
+      left: 0;
+      background-color: transparent;
+      border-top: {
+        left-radius: $border-radius;
+        right-radius: $border-radius;
+      }
+      content: '';
+    }
+
+    &:hover,
+    &:focus {
+      color: $navbar-nav-link-hover-color;
+    }
+
+    &.active {
+      color: $navbar-nav-link-hover-color;
+
+      &::after {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  color: $navbar-brand-color;
+  font-weight: $font-weight-extrabold;
+  font-size: $font-size-xxl;
+  text-decoration: none;
+  padding: {
+    top: $navbar-brand-padding-y;
+    bottom: $navbar-brand-padding-y;
+  }
+  margin-right: 1.5rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $navbar-brand-color;
+  }
+}
+
+.navbar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    display: block;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .navbar-nav {
+    background-color: $white;
+  }
+
+  .navbar {
+    .nav-link {
+      padding: {
+        left: $navbar-nav-link-padding-x - .25rem;
+        right: $navbar-nav-link-padding-x - .25rem;
+      }
+
+      &::after {
+        position: absolute;
+        width: .25rem;
+        height: 100%;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        background-color: transparent;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: $border-radius;
+        content: '';
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    .nav-link {
+      margin: {
+        left: $navbar-nav-link-padding-x;
+        right: $navbar-nav-link-padding-x;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav-start {
+    order: 0;
+  }
+}
+
+.navbar-nav-end {
+  margin-left: auto !important;
+}
+
+.navbar-toggler {
+  margin-left: .5rem;
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: box-shadow .15s ease-in-out;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.375em;
+  height: 1.375em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+
+.nav-styled-link {
+  display: inline-block;
+  font-size: $font-size-base * .875;
+  font-weight: $navbar-nav-link-font-weight;
+  color: $navbar-nav-link-color;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $navbar-nav-link-hover-color;
+  }
+
+  &.active {
+    color: $navbar-nav-link-hover-color;
+  }
+}

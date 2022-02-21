@@ -1,0 +1,106 @@
+.card-column {
+  display: flex;
+  flex-direction: column;
+  background-color: $gray-light;
+  border-radius: $card-border-radius;
+  padding: $card-padding-x;
+  margin-bottom: 1.5rem;
+  
+  @media (min-width: 996px) {
+    min-height: 60rem;
+  }
+}
+
+.card-column-title {
+  font-size: $font-size-base * .75;
+  text-transform: uppercase;
+  color: $gray-base;
+  font-weight: $font-weight-semibold;
+  margin-bottom: 1rem;
+}
+
+.card-task {
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  margin-bottom: 1.25rem;
+
+  .card-options {
+    display: flex;
+    justify-content: flex-end;
+    padding: {
+      top: ($card-padding-x - .8125rem);
+      left: ($card-padding-x - .125rem);
+      right: ($card-padding-x - .125rem);
+    }
+  }
+  
+  .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: ($card-padding-x - .25rem);
+    padding-top: ($card-padding-x - .75rem);
+
+    .card-info {
+      padding-left: 1rem;
+      text-align: right;
+
+      .card-info-title {
+        font-size: $font-size-base * .9375;
+        padding-top: .5rem;
+      }
+
+      b {
+        color: #2f2f2f;
+      }
+
+      svg {
+        margin-top: -1px;
+      }
+    }
+
+    .card-hours {
+      padding-right: .625rem;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 16px;
+        width: 1px;
+        border-right: 1px solid #e5e5e5;
+        margin-left: .625rem;
+        margin-bottom: -2px;
+      }
+    }
+
+    .card-image {
+      width: 96px;
+      border: 1px solid #e5e5e5;
+      border-radius: $border-radius;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .card-footer {
+    border-top: 1px solid hsl(0, 0%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: ($card-padding-x - .375rem) ($card-padding-x - .25rem);
+
+    .avatar-section {
+      color: $gray-base;
+      display: flex;
+      align-items: center;
+      
+      .avatar-sm {
+        margin-left: .625rem;
+      }
+    }
+  }
+}

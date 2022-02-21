@@ -1,0 +1,12 @@
+.btn-link {
+  display: inline-block;
+  text-align: center;
+  color: $btn-color;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  white-space: $btn-wrap;
+  padding: $btn-padding-y $btn-padding-x 0 $btn-padding-x;
+  background-color: transparent;
+  line-height: 1.5;
+  border: none;
+}

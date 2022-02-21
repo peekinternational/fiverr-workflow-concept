@@ -1,0 +1,29 @@
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  border-radius: $badge-border-radius;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.badge-warning {
+  background-color: #FFECD0;
+  color: darken(#FFECD0, 50%);
+}
+
+.badge-info {
+  background-color: #D3DFFB;
+  color: darken(#D3DFFB, 50%);
+}
+
+.badge-danger {
+  background-color: #FFD7EB;
+  color: darken(#FFD7EB, 50%);
+}
+
+.badge-success {
+  background-color: #CAF4E1;
+  color: darken(#CAF4E1, 50%);
+}
